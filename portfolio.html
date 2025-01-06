@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ff6f61;
+        }
+
+        h1, h2 {
+            color: #ff6f61;
+        }
+
+        .btn-custom {
+            background-color: #ff6f61;
+            color: #ffffff;
+        }
+
+        .btn-custom:hover {
+            background-color: #e65c50;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center justify-content-center text-center" style="height: 100vh;">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my work, skills, and passion for development.</p>
+            <a href="#contact" class="btn btn-custom">Get in Touch</a>
+            <button class="btn btn-custom mt-3" onclick="downloadResume()">Download My Resume</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-dark">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with expertise in creating dynamic and user-friendly websites. I enjoy transforming ideas into digital reality.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container text-center">
+            <h2>My Skills</h2>
+            <div class="row mt-4">
+                <div class="col-md-3 col-sm-6">HTML5</div>
+                <div class="col-md-3 col-sm-6">CSS3</div>
+                <div class="col-md-3 col-sm-6">JavaScript</div>
+                <div class="col-md-3 col-sm-6">React.js</div>
+                <div class="col-md-3 col-sm-6">Node.js</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="bg-dark">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
+            <form class="mt-4">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'resume.pdf';
+            link.download = 'My_Resume.pdf';
+            link.click();
+        }
+    </script>
+</body>
+</html>
